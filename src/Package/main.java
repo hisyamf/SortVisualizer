@@ -9,13 +9,13 @@ public class main extends JPanel{
         main main = new main();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setSize(1280, 720);
         frame.add(main);
 
-        int index;
         for (int i = 0; i < main.array.length; i++) {
-            main.array[i] = (int)((Math.random() * 380) + 30);
+            main.array[i] = (int)((Math.random() * 380) + 200);
         }
 
         for (int i = 0; i < main.array.length; i++) {
@@ -28,7 +28,7 @@ public class main extends JPanel{
                     main.array[j] = temp;
                 }
                 try {
-                    Thread.sleep(3);
+                    Thread.sleep(1);
                 }catch (Exception e) {
 
                 }
@@ -37,8 +37,8 @@ public class main extends JPanel{
         }
     }
 
-    int[] array = new int[110];
-    int xloc = 0, yloc = 682, width = 10;
+    int[] array = new int[315];
+    int xloc = 0, yloc = 682, width = 3;
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
